@@ -1,7 +1,6 @@
 from discord.ext import commands
 import python_weather
-import random
-
+import random 
 
 @commands.command()
 async def ping(ctx):
@@ -14,7 +13,7 @@ async def weather(ctx, *, city: str):
         weather = await client.get(city)
 
         await ctx.send(
-            f"Погода в городе {city}: {weather.temperature}°"
+            f"Weather in the city {city}: {weather.temperature}°"
         )
 
 
@@ -29,4 +28,4 @@ async def clear(ctx, amount: int):
 @commands.command()
 async def cube(ctx):
     randomlist = [1, 2, 3, 4, 5, 6]
-    await ctx.send("Кубик: " + str(random.choice(randomlist)))
+    await ctx.send("Cube: " + str(random.choice(randomlist)))

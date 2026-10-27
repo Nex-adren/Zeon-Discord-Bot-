@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import random
 from discord.ext import commands
 from commands import ping, weather, clear, cube
+from balance import balance, pay
 from anti_spam import anti_spam
 
 intents = discord.Intents.default()
@@ -24,7 +25,7 @@ async def on_message(message):
         return
 
 
-    await anti_spam(message)
+    await anti_spam(message, turn=False)
     await bot.process_commands(message)
 
 
@@ -32,6 +33,8 @@ bot.add_command(ping)
 bot.add_command(weather)
 bot.add_command(clear)
 bot.add_command(cube)
+bot.add_command(balance)
+bot.add_command(pay)
 
 
 
