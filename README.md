@@ -7,6 +7,8 @@
 - `!weather` - Shows the current weather in the city of your choice.
 - `!clear` - Deletes messages.
 - `!cube` - A dice mini-game.
+- `!pay` - You can top up your balance
+- `!balance` - You can Check your balance
 
 ## How to Run the Bot
 
