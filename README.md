@@ -1,0 +1,2 @@
+# Zeon
+Simple Discord Bot
