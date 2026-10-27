@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import random
 from discord.ext import commands
 from commands import ping, weather, clear, cube
+from anti_spam import anti_spam
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -21,6 +22,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
+
+
+    await anti_spam(message)
     await bot.process_commands(message)
 
 
